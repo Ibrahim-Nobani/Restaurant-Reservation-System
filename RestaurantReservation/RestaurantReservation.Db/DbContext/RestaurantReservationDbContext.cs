@@ -21,6 +21,9 @@ public class RestaurantReservationDbContext : DbContext
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<ReservationsWithCustomerAndRestaurant>().HasNoKey().ToView(nameof(ReservationsWithCustomerAndRestaurants));
+        modelBuilder.Entity<EmployeeWithRestaurantDetails>().HasNoKey().ToView(nameof(EmployeeWithRestaurantDetails));
+
         modelBuilder.Seed();
 
         base.OnModelCreating(modelBuilder);
