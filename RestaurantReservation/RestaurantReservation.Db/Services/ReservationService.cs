@@ -4,11 +4,11 @@ using RestaurantReservation.ServicesInterfaces;
 
 namespace RestaurantReservation.Services
 {
-    public class ReservationService : IReservationFilterService
+    public class ReservationService : IReservationService
     {
-        private readonly ReservationRepository _reservationRepository;
+        private readonly IReservationRepository _reservationRepository;
 
-        public ReservationService(ReservationRepository reservationRepository)
+        public ReservationService(IReservationRepository reservationRepository)
         {
             _reservationRepository = reservationRepository;
         }

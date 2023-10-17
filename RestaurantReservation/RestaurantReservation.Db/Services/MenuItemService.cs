@@ -5,9 +5,9 @@ namespace RestaurantReservation.Services
 {
     public class MenuItemService
     {
-        private readonly MenuItemRepository _menuItemRepository;
+        private readonly IMenuItemRepository _menuItemRepository;
 
-        public MenuItemService(MenuItemRepository menuItemRepository)
+        public MenuItemService(IMenuItemRepository menuItemRepository)
         {
             _menuItemRepository = menuItemRepository;
         }

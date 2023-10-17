@@ -1,13 +1,14 @@
 using RestaurantReservation.Db.Models;
 using RestaurantReservation.Repositories;
+using RestaurantReservation.ServicesInterfaces;
 
 namespace RestaurantReservation.Services
 {
     public class CustomerService
     {
-        private readonly CustomerRepository _customerRepository;
+        private readonly ICustomerRepository _customerRepository;
 
-        public CustomerService(CustomerRepository customerRepository)
+        public CustomerService(ICustomerRepository customerRepository)
         {
             _customerRepository = customerRepository;
         }

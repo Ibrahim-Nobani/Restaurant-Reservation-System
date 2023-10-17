@@ -6,9 +6,9 @@ namespace RestaurantReservation.Services
 {
     public class EmployeeService : IManagerService
     {
-        private readonly EmployeeRepository _employeeRepository;
+        private readonly IEmployeeRepository _employeeRepository;
 
-        public EmployeeService(EmployeeRepository employeeRepository)
+        public EmployeeService(IEmployeeRepository employeeRepository)
         {
             _employeeRepository = employeeRepository;
         }
@@ -40,7 +40,7 @@ namespace RestaurantReservation.Services
         public IEnumerable<Employee> ListAllManagers()
         {
             return _employeeRepository.GetAll()
-                .Where(employee => employee.Position == "Manager")
+                .Where(employee => employee.Position == "Manager") // Enum
                 .ToList();
         }
     }

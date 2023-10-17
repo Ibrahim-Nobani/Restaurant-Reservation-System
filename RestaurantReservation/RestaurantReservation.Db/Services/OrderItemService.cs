@@ -5,9 +5,9 @@ namespace RestaurantReservation.Services
 {
     public class OrderItemService
     {
-        private readonly OrderItemRepository _orderItemRepository;
+        private readonly IOrderItemRepository _orderItemRepository;
 
-        public OrderItemService(OrderItemRepository orderItemRepository)
+        public OrderItemService(IOrderItemRepository orderItemRepository)
         {
             _orderItemRepository = orderItemRepository;
         }
