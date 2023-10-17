@@ -5,7 +5,7 @@ using RestaurantReservation.ServicesInterfaces;
 
 namespace RestaurantReservation.Repositories
 {
-    public class RestaurantRepository : IRepository<Restaurant>, IRestaurantService
+    public class RestaurantRepository : IRestaurantRepository
     {
         private readonly RestaurantReservationDbContext _restaurantReservationDbContext;
 

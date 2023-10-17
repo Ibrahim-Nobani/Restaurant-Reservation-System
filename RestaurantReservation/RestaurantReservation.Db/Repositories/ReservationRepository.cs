@@ -1,8 +1,9 @@
 using RestaurantReservation.Db.Models;
+using RestaurantReservation.ServicesInterfaces;
 
 namespace RestaurantReservation.Repositories
 {
-    public class ReservationRepository : IRepository<Reservation>
+    public class ReservationRepository : IReservationRepository
     {
         private readonly RestaurantReservationDbContext _restaurantReservationDbContext;
 

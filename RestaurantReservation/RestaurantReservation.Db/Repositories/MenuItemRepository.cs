@@ -2,7 +2,7 @@ using RestaurantReservation.Db.Models;
 
 namespace RestaurantReservation.Repositories
 {
-    public class MenuItemRepository : IRepository<MenuItem>
+    public class MenuItemRepository : IMenuItemRepository
     {
         private readonly RestaurantReservationDbContext _restaurantReservationDbContext;
 
