@@ -1,7 +1,10 @@
 using RestaurantReservation.Db.Models;
 using RestaurantReservation.Repositories;
 
-public interface IOrderItemRepository : IRepository<OrderItem>
+namespace RestaurantReservation.ServicesInterfaces
 {
+    public interface IOrderItemRepository : IRepository<OrderItem>
+    {
 
+    }
 }

@@ -1,4 +1,5 @@
 using RestaurantReservation.Db.Models;
+using RestaurantReservation.ServicesInterfaces;
 
 namespace RestaurantReservation.Repositories
 {

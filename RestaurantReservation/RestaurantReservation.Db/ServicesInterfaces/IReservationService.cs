@@ -1,6 +1,9 @@
 using RestaurantReservation.Db.Models;
 
-public interface IReservationService
+namespace RestaurantReservation.ServicesInterfaces
 {
-    IEnumerable<Reservation> GetReservationsByCustomer(int customerId);
+    public interface IReservationService
+    {
+        IEnumerable<Reservation> GetReservationsByCustomer(int customerId);
+    }
 }

@@ -1,7 +1,10 @@
 using RestaurantReservation.Db.Models;
 using RestaurantReservation.Repositories;
 
-public interface IEmployeeRepository : IRepository<Employee>
+namespace RestaurantReservation.ServicesInterfaces
 {
+    public interface IEmployeeRepository : IRepository<Employee>
+    {
 
+    }
 }

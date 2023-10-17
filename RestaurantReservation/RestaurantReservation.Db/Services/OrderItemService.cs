@@ -1,5 +1,6 @@
 using RestaurantReservation.Db.Models;
 using RestaurantReservation.Repositories;
+using RestaurantReservation.ServicesInterfaces;
 
 namespace RestaurantReservation.Services
 {
@@ -12,27 +13,27 @@ namespace RestaurantReservation.Services
             _orderItemRepository = orderItemRepository;
         }
 
-        public OrderItem GetorderItemById(int orderItemId)
+        public OrderItem GetOrderItemById(int orderItemId)
         {
             return _orderItemRepository.GetById(orderItemId);
         }
 
-        public IEnumerable<OrderItem> GetAllorderItems()
+        public IEnumerable<OrderItem> GetAllOrderItems()
         {
             return _orderItemRepository.GetAll();
         }
 
-        public void CreateorderItem(OrderItem orderItem)
+        public void CreateOrderItem(OrderItem orderItem)
         {
             _orderItemRepository.Add(orderItem);
         }
 
-        public void UpdateorderItem(OrderItem orderItem)
+        public void UpdateOrderItem(OrderItem orderItem)
         {
             _orderItemRepository.Update(orderItem);
         }
 
-        public void DeleteorderItem(OrderItem orderItem)
+        public void DeleteOrderItem(OrderItem orderItem)
         {
             _orderItemRepository.Delete(orderItem);
         }
